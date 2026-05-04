@@ -17,6 +17,7 @@ export class UserService {
     const hashedPassword = await hash(createUserDto.password, saltOrRounds);
     const newUser = {
       ...createUserDto,
+      type_user: 1,
       password: hashedPassword,
     };
 
